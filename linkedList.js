@@ -90,5 +90,26 @@ class LinkedList {
         }
     }
 
+    // remove specific Node from Linked List
+    removeVal(val) {
+        let curr = this.head;
+        let prev = null;
+
+        while (curr != null) {
+            if (curr.val === val) {
+                if (prev === null) {
+                    this.head = curr.next;
+                } else {
+                    prev.next = curr.next;
+                }
+                this.size--;
+                return curr.val;
+            }
+            prev = curr;
+            curr = curr.next;
+        }
+        return -1;
+    }
+
 
 }
