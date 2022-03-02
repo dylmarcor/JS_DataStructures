@@ -32,4 +32,35 @@ class LinkedList {
         }
         this.size++;
     }
+
+    insertAt(val, index) {
+        if (index < 0 || index > this.size) {
+            throw console.error("Please enter a valid index");
+        } else {
+            let node = new Node(val);
+            let curr, prev;
+
+            curr = this.head;
+
+            if (index === 0) {
+                node.next = this.head;
+                this.head = node;
+            } else {
+                curr = this.head;
+                let iter = 0;
+
+                while (iter < index) {
+                    iter++;
+                    prev = curr;
+                    curr = curr.next;
+                }
+
+                node.next = curr;
+                prev.next = node;
+            }
+            this.size++;
+        }
+    }
+
+    
 }
