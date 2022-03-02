@@ -33,6 +33,7 @@ class LinkedList {
         this.size++;
     }
 
+    // add a Node at certain index on Linked List
     insertAt(val, index) {
         if (index < 0 || index > this.size) {
             throw console.error("Please enter a valid index");
@@ -62,6 +63,7 @@ class LinkedList {
         }
     }
 
+    // remove a Node at certain index on Linked List
     removeFrom(val, index) {
         if (index < 0 || index > this.size) {
             throw console.error("Please enter a valid index")
@@ -88,5 +90,5 @@ class LinkedList {
         }
     }
 
-    
+
 }
