@@ -134,4 +134,20 @@ class LinkedList {
         return this.size === 0;
     }
 
+    // return size of list
+    size_of_list() {
+        console.log(this.size);
+    }
+
+    // print the list items
+    printList() {
+        let curr = this.head;
+        let str = "";
+        while (curr) {
+            str += curr.val + " ";
+            curr = curr.next;
+        }
+        console.log(str);
+    }
+
 }
