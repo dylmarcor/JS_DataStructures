@@ -108,8 +108,25 @@ class LinkedList {
             prev = curr;
             curr = curr.next;
         }
-        return -1;
+        return -1; // if not found
     }
 
+    // Helper Methods
+
+    // find index of an element
+    indexOf(val) {
+        let count = 0;
+        let curr = this.head;
+
+        while (curr != null) {
+            if (curr.val === val) {
+                return count;
+            }
+            count++;
+            curr = curr.next;
+        }
+
+        return -1; // if not found
+    }
 
 }
