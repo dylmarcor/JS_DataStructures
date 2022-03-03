@@ -129,4 +129,9 @@ class LinkedList {
         return -1; // if not found
     }
 
+    // checks if the list is empty
+    isEmpty() {
+        return this.size === 0;
+    }
+
 }
