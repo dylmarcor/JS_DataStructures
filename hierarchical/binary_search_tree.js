@@ -15,5 +15,9 @@ class BinarySort {
         this.size = 0;
     }
 
-    
+    add(element) {
+        let node = new Node(element);
+
+        
+    }
 }
