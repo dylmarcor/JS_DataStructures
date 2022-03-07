@@ -2,8 +2,8 @@
 
 // Create Node Obj 
 class Node {
-    constructor(element) {
-        this.head = element;
+    constructor(data) {
+        this.data = data;
         this.right = null;
         this.left = null;
     }
@@ -15,8 +15,9 @@ class BinarySearchTree {
         this.size = 0;
     }
 
-    insert(element) {
-        let newNode = new Node(element);
+    // insert brand new node
+    insert(data) {
+        let newNode = new Node(data);
 
         if (this.root === null) {
             this.root = newNode;
@@ -28,7 +29,7 @@ class BinarySearchTree {
     }
 
     insertNode(node, newNode) {
-        if (newNode.element < node.element) {
+        if (newNode.data < node.data) {
             if (node.left === null) {
                 node.left = newNode;
             } else {
