@@ -11,7 +11,7 @@ class Node {
 
 class BinarySearchTree {
     constructor() {
-        this.head = null;
+        this.root = null;
         this.size = 0;
     }
 
