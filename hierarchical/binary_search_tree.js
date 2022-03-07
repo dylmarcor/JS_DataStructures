@@ -9,7 +9,7 @@ class Node {
     }
 }
 
-class BinarySort {
+class BinarySearchTree {
     constructor() {
         this.head = null;
         this.size = 0;
@@ -18,6 +18,6 @@ class BinarySort {
     add(element) {
         let node = new Node(element);
 
-        
+
     }
 }
